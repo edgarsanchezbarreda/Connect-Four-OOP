@@ -15,20 +15,26 @@
   border-radius: 50%;
 }
 
-.piece.p1 {
-  background-color: red;
-}
-
-.piece.p2 {
-  background-color: blue;
-}
-
-/* column-top is table row of clickable areas for each column */
-
 #column-top td {
   border: dashed 1px lightgray;
 }
 
 #column-top td:hover {
   background-color: gold;
+}
+
+#p1-color, #p2-color, #start, #title, #addPlayers{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#game, #selections, #title, #morePlayersSection{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
+
+body{
+  background-color: #FAEEE7;
 }
