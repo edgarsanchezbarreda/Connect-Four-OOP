@@ -2,9 +2,6 @@
 class Game {
   constructor(p1, p2, height = 6, width = 7){
     this.players = [p1, p2];
-    this.pushPlayers = function(){
-      this.players.push(this);
-    }
     this.height = height;
     this.width = width;
     this.currPlayer = p1;
@@ -140,19 +137,8 @@ class Player{
     this.color = color;
   }
 }
-const morePlayersSection = document.querySelector('#morePlayersSection');
-const addPlayers = document.querySelector('#addPlayers');
-addPlayers.addEventListener('click', function(event){
-  const newPlayers = document.createElement('input');
-  newPlayers.setAttribute('type', 'text');
-  newPlayers.setAttribute('placeholder', 'Choose player color');
-  
-  morePlayersSection.append(newPlayers);
-  this.pushPlayers();
-})
 
 document.querySelector('#start').addEventListener('click', function(){
-  console.log('clicked');
   let p1 = new Player(document.getElementById('p1-color').value)
   let p2 = new Player(document.getElementById('p2-color').value)
   new Game(p1, p2);
